@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="assets/icons/account_circle.svg"/>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico"/>
+    <script src="scripts/hide_navbar.js"></script>
+    <title>Warstock</title>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="hamburger-menu" id="hamburgerButton" onclick="shrinkHamburger()">
+            <div class="bar1" id="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3" id="bar3"></div>
+        </div>
+        <div class="logo">[Warstock]</div>
+        <div class="dropdown">
+            <div class="dropdown-button"> 
+                <img src="assets/icons/account_circle.svg" alt="Account" width="40px" height="40px" style="filter: invert();">
+            </div>
+            <div class="dropdown-content">
+                <a href="php/login.php" target="_blank" style="border-bottom: 2px solid rgb(35,35,35);">Sign In</a>
+                <a href="pages/register.html" target="_blank">Register</a>
+            </div>
+        </div>
+    </div> 
+    <div class="sidenav" id="sideNav">
+        <a href="#">Newswire</a>
+        <a href="#">Contact</a>
+        <a href="#">Offers</a>
+    </div> 
+    <div class="product-container">
+        <div class="product-filter">
+            <input type="text" name="searchbox" placeholder="Search products" class="textbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="category" id="category" autocomplete="off" onchange="changeCategory(this.value)" class="drop">
+                <option value="" disabled selected hidden>Category</option>
+                <option value="aircafts">Aircrafts</option>
+                <option value="firearms">Firearms</option>
+                <option value="vehicles">Vechicles</option>
+            </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name="sortby" id="sortby" autocomplete="off" class="drop">
+                <option value="" disabled selected hidden>Sort By</option>
+                <option value="aircafts">Newest</option>
+                <option value="firearms">$ - $$$</option>
+                <option value="vehicles">$$$ - $</option>
+            </select>
+        </div>
+        <div class="product-area">
+            <img src="assets/backgrounds/skeleton.gif" alt="skeleton">
+            <h1>Coming Soon...</h1>
+        </div>
+    </div>
+</body>
+</html>
