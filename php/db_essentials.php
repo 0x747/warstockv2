@@ -7,7 +7,7 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     function send_email($email, $subject, $message) {
-        $headers = "From: Warstock <youeamil@example.com>\r\n";
+        $headers = "From: Warstock <youremail@example.com>\r\n";
         $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
         mail($email, $subject, $message, $headers);
