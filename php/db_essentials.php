@@ -20,11 +20,7 @@
         $sql = "SELECT `email` FROM `user_credentials` WHERE `email` = '$email'";
         $result = $conn -> query($sql);
 
-        if($result -> num_rows > 0) {
-            return true;
-        }
-
-        return false;
+        return ($result -> num_rows > 0);
     }
 
     function is_record_duplicate($email) {
@@ -34,10 +30,6 @@
         $sql = "SELECT * FROM `user_credentials` WHERE `email` = '$email'";
         $result = $conn -> query($sql);
 
-        if($result -> num_rows > 0) {
-            return true; // Record is a duplicate.
-        }
-
-        return false; // Record is not a duplicate. 
+        return ($result -> num_rows > 0);
     }
 ?>
